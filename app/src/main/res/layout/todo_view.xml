@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/todo_view_layout_padding">
+    <!-- To-do title-->
+    <TextView
+        android:id="@+id/textViewTodo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:maxLines="3"
+        android:textSize="@dimen/todo_title_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/checkBoxDone"
+        app:layout_constraintStart_toEndOf="@+id/imageViewToDoIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="todo" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDone"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/layout_marginEnd"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:textSize="@dimen/checkbox_done_text_size"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTodo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewTodo" />
+
+    <TextView
+        android:id="@+id/textViewDeadlineLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:text="@string/label_deadline_short"
+        android:textSize="@dimen/todo_datetime_text_size"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/textViewTodo"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTodo"
+        tools:text="deadline: "
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewDeadline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_marginStart"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:textSize="@dimen/todo_datetime_text_size"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/textViewTodo"
+        app:layout_constraintStart_toEndOf="@+id/textViewDeadlineLabel"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTodo"
+        tools:text="deadline for todo"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/imageViewToDoIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/description_todo_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_todo_48" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/divider_layout_height"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:layout_marginBottom="@dimen/layout_marginBottom"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxDone"
+        app:layout_constraintStart_toStartOf="@+id/textViewTodo"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDeadline" />
+</androidx.constraintlayout.widget.ConstraintLayout>

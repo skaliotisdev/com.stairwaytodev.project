@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Stairwaytodev Sample</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="set_time">Set Time</string>
+    <string name="set_date">Set Date</string>
+    <string name="description_add_todo">Add To-Do</string>
+    <string name="description_todo_icon">To-Do Icon</string>
+    <string name="fragment_todo_list_title">My To-Do List</string>
+    <string name="fragment_add_todo">Add New To-Do</string>
+    <string name="fragment_edit_todo">Edit To-Do</string>
+    <string name="hint_add_todo">enter your To-Do here</string>
+    <string name="label_deadline_long">I have to do it by: </string>
+    <string name="label_deadline_short">deadline: </string>
+    <string name="toast_todo_empty">To-Do cannot be empty!</string>
+    <string name="toast_todo_saved">To-Do saved.</string>
+    <string name="toast_todo_deleted">To-Do deleted.</string>
+    <string name="toast_todos_deleted">To-Do list is deleted.</string>
+    <string name="dialog_delete_todo">The requested To-Do will be deleted. Are you sure?</string>
+    <string name="dialog_delete_todos">To-Do list will be deleted. Are you sure?</string>
+    <string name="dialog_delete_attention">Attention!</string>
+</resources>

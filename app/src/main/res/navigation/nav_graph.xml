@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/toDoListFragment">
+    <fragment
+        android:id="@+id/toDoListFragment"
+        android:name="com.stairwaytodev.project.ui.todo.todo_list.ToDoListFragment"
+        android:label="ToDoListFragment" >
+        <action
+            android:id="@+id/action_toDoListFragment_to_addToDoFragment"
+            app:destination="@id/addToDoFragment" />
+        <action
+            android:id="@+id/action_toDoListFragment_to_editToDoFragment"
+            app:destination="@id/editToDoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addToDoFragment"
+        android:name="com.stairwaytodev.project.ui.todo.add_todo.AddToDoFragment"
+        android:label="fragment_add_todo"
+        tools:layout="@layout/fragment_add_todo">
+        <action
+            android:id="@+id/action_addToDoFragment_to_toDoListFragment"
+            app:destination="@id/toDoListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editToDoFragment"
+        android:name="com.stairwaytodev.project.ui.todo.edit_todo.EditToDoFragment"
+        android:label="fragment_edit_todo"
+        tools:layout="@layout/fragment_edit_todo">
+        <action
+            android:id="@+id/action_editToDoFragment_to_toDoListFragment"
+            app:destination="@id/toDoListFragment" />
+        <argument
+            android:name="existingToDo"
+            app:argType="com.stairwaytodev.project.data.todo.ToDoModel" />
+    </fragment>
+</navigation>

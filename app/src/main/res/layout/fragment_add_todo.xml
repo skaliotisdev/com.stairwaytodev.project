@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.todo.todo_list.add_todo.AddToDoFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_view" />
+        <EditText
+            android:maxLines="3"
+            android:id="@+id/editTextToDo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_marginStart"
+            android:layout_marginEnd="@dimen/layout_marginEnd"
+            android:autofillHints="false"
+            android:hint="@string/hint_add_todo"
+            android:inputType="textMultiLine"
+            android:textSize="@dimen/editText_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:text="Add a new to-do here" />
+
+        <TextView
+            android:id="@+id/labelDeadlineToDo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_marginStart"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:layout_marginEnd="@dimen/layout_marginEnd"
+            android:gravity="start"
+            android:text="@string/label_deadline_long"
+            android:textSize="@dimen/editText_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextToDo" />
+
+        <TextView
+            android:id="@+id/textViewToDoTimeSet"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/layout_marginStart"
+            android:gravity="center"
+            android:textSize="@dimen/editText_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonShowTimePickerDialog"
+            app:layout_constraintStart_toEndOf="@+id/buttonShowTimePickerDialog"
+            app:layout_constraintTop_toTopOf="@+id/buttonShowTimePickerDialog"
+            tools:text="00:00" />
+
+        <Button
+            android:id="@+id/buttonShowTimePickerDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_marginStart"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:text="@string/set_time"
+            android:textSize="@dimen/button_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelDeadlineToDo" />
+
+        <Button
+            android:id="@+id/buttonShowDatePickerDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:text="@string/set_date"
+            android:textSize="@dimen/button_text_size"
+            app:layout_constraintStart_toStartOf="@+id/buttonShowTimePickerDialog"
+            app:layout_constraintTop_toBottomOf="@+id/buttonShowTimePickerDialog" />
+
+        <TextView
+            android:id="@+id/textViewToDoDateSet"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/layout_marginStart"
+            android:gravity="center"
+            android:textSize="@dimen/editText_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonShowDatePickerDialog"
+            app:layout_constraintStart_toEndOf="@+id/buttonShowDatePickerDialog"
+            app:layout_constraintTop_toTopOf="@+id/buttonShowDatePickerDialog"
+            tools:text="05/05/2021" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabSaveToDo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_layout_margin"
+            android:contentDescription="@string/description_add_todo"
+            android:src="@drawable/ic_save_black_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

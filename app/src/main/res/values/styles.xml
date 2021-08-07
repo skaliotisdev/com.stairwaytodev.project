@@ -1,0 +1,26 @@
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorWhite</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="android:textColorSecondary">@color/colorBlack</item>
+        <item name="materialAlertDialogTheme">@style/AlertDialogTheme</item>
+        <item name="materialThemeOverlay">@style/FloatingActionButtonThemeOverlay</item>
+    </style>
+
+    <style name="FloatingActionButtonThemeOverlay">
+        <item name="colorOnSecondary">@color/colorWhite</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="colorPrimary">@color/colorSecondary</item>
+        <item name="android:textColorPrimary">@color/colorBlack</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="colorOnPrimary">@color/colorWhite</item>
+    </style>
+</resources>
